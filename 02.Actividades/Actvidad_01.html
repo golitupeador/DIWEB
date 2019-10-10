@@ -1,0 +1,79 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>UD02 - Selectores 01 </title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./estilos/Actividad_01.css">
+
+    <style>
+        @import "estilo_ejercicio_02.css";
+    </style>
+
+<script data-dapp-detection="">
+(function() {
+    let alreadyInsertedMetaTag = false
+
+    function __insertDappDetected() {
+    if (!alreadyInsertedMetaTag) {
+        const meta = document.createElement('meta')
+        meta.name = 'dapp-detected'
+        document.head.appendChild(meta)
+        alreadyInsertedMetaTag = true
+    }
+    }
+
+    if (window.hasOwnProperty('web3')) {
+    // Note a closure can't be used for this var because some sites like
+    // www.wnyc.org do a second script execution via eval for some reason.
+    window.__disableDappDetectionInsertion = true
+    // Likely oldWeb3 is undefined and it has a property only because
+    // we defined it. Some sites like wnyc.org are evaling all scripts
+    // that exist again, so this is protection against multiple calls.
+    if (window.web3 === undefined) {
+        return
+    }
+    if (!window.web3.currentProvider ||
+        !window.web3.currentProvider.isMetaMask) {
+        __insertDappDetected()
+    }
+    } else {
+    var oldWeb3 = window.web3
+    Object.defineProperty(window, 'web3', {
+        configurable: true,
+        set: function (val) {
+        if (!window.__disableDappDetectionInsertion)
+            __insertDappDetected()
+        oldWeb3 = val
+        },
+        get: function () {
+        if (!window.__disableDappDetectionInsertion)
+            __insertDappDetected()
+        return oldWeb3
+        }
+    })
+    }
+})()</script></head>
+<body>
+
+    <header>
+        <h1>
+            Selectores del Mundo Unidos
+        </h1>
+        <nav>
+            <ul>
+                <li class="navegacion"><a href="https://bbc.co.uk" lang="en-GB" rel="alternate">Noticias</a></li>
+                <li class="navegacion"><a href="pagina2.html" lang="es-ES" rel="next">Otras noticias</a></li>
+                <li class="navegacion"><a href="tienda.html" lang="es-ES" rel="tag">Tienda</a></li>
+                <li class="navegacion"><a href="tienda.html?destacados=True" lang="es-ES" rel="bookmark">Productos destacados</a></li>
+                <li class="navegacion"><a href="ayuda.pdf" lang="es-ES" rel="help">Ayuda</a></li>
+                <li class="navegacion"><a href="busqueda.html" lang="es-ES" rel="search">Búsqueda de productos</a></li>
+                <li class="navegacion"><a href="GoogleNoEntres.doc" lang="en-AU" rel="nofollow">Documento interno secreto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+</body></html>
