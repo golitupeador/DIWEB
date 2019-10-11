@@ -25,6 +25,16 @@ body
     background-color: rgb(241, 65, 65);
 }
 
+#dificultad:valid
+{
+    background-color: var(--main-bg-color);
+}
+
+#dificultad:invalid
+{
+    background-color: rgb(241, 65, 65);
+}
+
 #profesion
 {
     border-radius:36px;
