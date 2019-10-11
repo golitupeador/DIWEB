@@ -15,6 +15,11 @@ body
     background-color: var(--main-bg-color);
 }
 
+#nombre:valid
+{
+    background-color: var(--main-bg-color);
+}
+
 #nombre:invalid
 {
     background-color: rgb(241, 65, 65);
