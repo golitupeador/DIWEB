@@ -25,12 +25,12 @@ body
     background-color: rgb(241, 65, 65);
 }
 
-#dificultad:valid
+#puntosCordura:valid
 {
     background-color: var(--main-bg-color);
 }
 
-#dificultad:invalid
+#puntosCordura:invalid
 {
     background-color: rgb(241, 65, 65);
 }
