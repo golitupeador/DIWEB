@@ -1,0 +1,70 @@
+:root 
+{
+--main-bg-color: rgb(241, 194, 65);
+}
+
+body 
+{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+#nombre
+{
+    background-color: var(--main-bg-color);
+}
+
+#nombre:invalid
+{
+    background-color: rgb(241, 65, 65);
+}
+
+#profesion
+{
+    border-radius:36px;
+  display:inline-block;
+  overflow:hidden;
+  background:#f6f6f6;
+  border:1px solid #e6e6e6;
+  font-family: 'Courier New', Courier, monospace;
+}
+#puntosCordura
+{
+    background-color: var(--main-bg-color);
+}
+
+form input[type=submit]
+{
+    margin-top: 5px;
+    border-radius:36px;
+    text-transform: uppercase;
+    border: none;
+    background-color:var(--main-bg-color);
+    box-shadow:6px 6px 12px grey; 
+    
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+ 
+
+a:active ~ #nombre
+{
+    background-color: rgb(121, 241, 65);
+}
+
+#dificultad:checked:after{
+    width: 150px;
+    height: 150px;
+    background-image: url(../imagenes/cthulu.jpg);
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-position-x: 20px;
+    content: "";
+}

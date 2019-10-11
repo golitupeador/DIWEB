@@ -15,10 +15,8 @@ li:nth-child(3)
 
 li:nth-child(odd):hover::before 
 {
-
     display:inline-block;
     content:"Semos impares -";
-
 }
 li:nth-child(even):hover::after 
 {
