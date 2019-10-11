@@ -51,12 +51,6 @@ a
     color: black;
 }
 
- 
-
-a:active ~ #nombre
-{
-    background-color: rgb(121, 241, 65);
-}
 
 #dificultad:checked:after{
     width: 150px;
@@ -67,4 +61,10 @@ a:active ~ #nombre
     display: inline-block;
     background-position-x: 20px;
     content: "";
+}
+
+/*Esto deberia funcionar tal que así, no lo hace y he probado mil cosas, me rindo si no puedo usar Javascript ajaja*/
+a:active ~ #nombre
+{
+    background-color: rgb(121, 241, 65);
 }
