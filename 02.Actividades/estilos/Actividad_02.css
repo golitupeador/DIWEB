@@ -1,0 +1,31 @@
+h2::first-letter 
+{
+    color: rgb(248, 34, 34);
+}
+
+h1+h2
+{
+    color: brown
+}
+
+li:nth-child(3)
+{
+    color: aqua
+}
+
+li:nth-child(odd):hover::before 
+{
+
+    display:inline-block;
+    content:"Semos impares -";
+
+}
+li:nth-child(even):hover::after 
+{
+
+    display:inline-block;
+    content: " - Semos pares" ;
+   
+}
+
+
