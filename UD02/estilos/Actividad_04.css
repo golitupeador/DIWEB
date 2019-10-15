@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+  }
+
+body
+{
+    font-family: "MyWebFont";
+    width: 100%;
+    min-height: 800px;
+}
+
+header
+{
+    width: 100%;
+    min-height: 120px;
+    
+}
+
+.logo
+{
+    display:inline-block;
+    min-height: 120px;
+    min-width: 20%;
+    float: left;
+    margin-top: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.header-right
+{
+    color: black;
+    text-decoration: none;
+    min-height: 120px;
+    min-width: 40%;
+    float: right;
+}
