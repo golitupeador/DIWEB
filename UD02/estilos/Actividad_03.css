@@ -5,7 +5,7 @@
 
 body 
 {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Grenze;
 }
 
 
@@ -42,7 +42,7 @@ body
   overflow:hidden;
   background:#f6f6f6;
   border:1px solid #e6e6e6;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Grenze;
 }
 #puntosCordura
 {
