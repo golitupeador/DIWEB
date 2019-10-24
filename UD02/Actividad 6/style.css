@@ -81,15 +81,12 @@ h6 {
     background-color: grey;
 }
 
-.item:nth-child(odd):hover + .item:nth-child(even)
+.item:nth-child(odd):hover + .item:nth-child(even), .item:nth-child(odd):hover
 {
     box-shadow: 5px 5px 5px rgb(0, 0, 0);
 }
 
-.item:nth-child(odd):hover
-{
-    box-shadow: 5px 5px 5px rgb(0, 0, 0);
-}
+
 
 .item1,.item3,.item7,.item11,.item15,.item19 {
     grid-column-start: 1;
@@ -118,4 +115,14 @@ h6 {
 {
     grid-column-start: 5;
     grid-column-end: 7;
+}
+
+#SealOfApproval
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url(cthulhu_approval.gif);
+    width: 100px;
+    height: 100px;
 }
