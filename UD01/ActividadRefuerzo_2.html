@@ -7,25 +7,25 @@
     <title>Actividad refuerzo</title>
 </head>
 <body>
-    <form >
+    <form autocomplete="on" method="post" action="mailto:pedidos@hamburgueseria.com">
         <h2>Pide tu burguer</h2>
         <p>Seleccione el numero de hamburguesas que quiere:</p>
 
         <div>
             <label for="hcompleta">Hamburguesa Completa</label>
-            <input type="text" id="hcompleta" value="0" max="10">
+            <input type="number" id="hcompleta" value="0" max="10">
         </div>
         <div>
             <label for="hpollo">Hamburguesa Completa</label>
-            <input type="text" id="hpollo" value="0" max="10">
+            <input type="number" id="hpollo" value="0" max="10">
         </div>
         <div>
             <label for="hvegetariana">Hamburguesa Completa</label>
-            <input type="text" id="hvegetariana" value="0" max="10">
+            <input type="number" id="hvegetariana" value="0" max="10">
         </div>
         <div>
             <label for="hdoble">Hamburguesa Completa</label>
-            <input type="text" id="hdoble" value="0" max="10">
+            <input type="number" id="hdoble" value="0" max="10">
         </div>
     </br>
 </br>
@@ -40,22 +40,22 @@
         <div>
             <label for="Nombre">Nombre</label>
             </br>
-            <input type="text" id="Nombre" placeholder="Nombre">
+            <input type="text" id="Nombre" placeholder="Nombre" required>
         </div>
         <div>
             <label for="hdoble">Apellidos</label>
             </br>
-            <input type="text" id="hdoble" value="0" max="10">
+            <input type="text" id="hdoble" required>
         </div>
         <div>
             <label for="hdoble">Telefono</label>
             </br>
-            <input type="text" id="hdoble" value="0" max="10">
+            <input type="text" id="hdoble" required>
         </div>
         <div>
             <label for="hdoble">Email</label>
             </br>
-            <input type="text" id="hdoble" value="0" max="10">
+            <input type="email" id="hdoble" value="0" max="10" required>
         </div>
 
         <div>
@@ -68,8 +68,8 @@
         </div>
 
         <hr>
-            <input type="checkbox" id="informacion" checked>Quiero recibir informacion de las ofertas</input>
-            <input type="checkbox" id="acepto">Acepto las condiciones de uso</input>
+            <input type="checkbox" id="informacion" checked required>Quiero recibir informacion de las ofertas</input>
+            <input type="checkbox" id="acepto" required>Acepto las condiciones de uso</input>
         <hr>
 
         <input type="button" value="Aceptar">
