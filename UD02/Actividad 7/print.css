@@ -1,0 +1,12 @@
+header, footer, nav, aside 
+    {
+    display: none;
+    }
+.seccion{
+    width: 100%;
+    margin: 0px,0px,0px,0px;
+    }
+.contenido1,.contenido2
+{
+    text-align: left;
+}
