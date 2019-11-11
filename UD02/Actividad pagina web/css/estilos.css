@@ -1,6 +1,6 @@
 *
 {
-    
+    font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
     margin: 0 auto 0 auto;
     
@@ -97,7 +97,7 @@ ul li:before {
     float:right;
     margin-top: 2.5%;
     width: 20%;
-    height: 420px;
+    height: 450px;
     background-color: white;
     margin-right: 3%;
 }
@@ -207,4 +207,132 @@ form input
     color: white;
     width: 70%;
     height: 30px;
+}
+
+.seccion4
+{
+    width: 90%;
+    min-height: 360px;
+
+    text-align: center;
+}
+.staff
+{
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+
+}
+.titulo
+{
+    margin-top: 4%;
+    margin-bottom: 4%;
+    max-width: 100%;
+    font-size: 30px;
+}
+.columnaStaff
+{
+    height: 320px;
+    box-shadow: 0px 9px 19px -2px rgba(0,0,0,0.24);
+}
+.staffImagenes
+{
+    height: 185px;
+    width: 279px;
+    margin-bottom: 8%;
+    margin-right: 8%;
+}
+.staffImagenes img
+{
+    max-height: 100%;
+    max-width: 100%;
+    
+}
+.staffNombre h2
+{
+    margin-bottom: 4%;
+}
+
+
+.seccion5
+{
+    width: 90%;
+    min-height: 360px;
+    text-align: center;
+    background-image:url(../images/fondo_inferior.jpg);
+    margin-top: 4%;
+   
+}
+
+.layer
+{
+    background-color: rgba(177, 182, 248, 0.787);
+    width: 100%;
+    min-height: 360px;
+    padding-top: 4%;
+    color: white;
+}
+.information
+{
+    font-size: 30px;
+}
+.textoinf
+{
+    font-size: 20px;
+    margin-top: 3%;
+}
+.camuflajeCaja
+{
+    background-color: #35B81E;
+    margin-top: 4%;
+    width: 25%;
+    height: 50px;
+    font-size: 20px;
+    
+}
+.camuflajeCaja a
+{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    top: 25%;
+}
+
+
+
+.footer
+{
+    width: 90%;
+    min-height: 45px;
+    background-color: rgb(29, 28, 28);
+    color: white;
+    padding-top: 17px;
+    font-size: 15px;
+}
+.footer li
+{
+    display: inline-block;
+    margin-right: 10px;
+    
+}
+footer li:before {
+    content: '';
+  }
+.footer ul
+{
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+
+.footer ul:nth-child(1)
+{
+    margin-left: 50px;
+}
+
+
+.footer p{
+    width: 30%;
+    float: right;
+    text-align: center;
 }
