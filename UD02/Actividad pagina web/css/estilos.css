@@ -9,7 +9,7 @@ body
 {
     height: 100%;
 }
-/*HACE FALTA DEFINIRLE EL TAMAÑO MAXIMO DE 1368 O ALGO ASI*/
+/*HACE FALTA DEFINIRLE EL TAMAÑO MAXIMO DE 1339 O ALGO ASI*/
 
 header, .seccion1
 {
@@ -20,7 +20,6 @@ header, .seccion1
     background-attachment: fixed;
     background-attachment: fixed;
 
-    
 }
 header
 {
@@ -213,7 +212,6 @@ form input
 {
     width: 90%;
     min-height: 360px;
-
     text-align: center;
 }
 .staff
@@ -335,4 +333,108 @@ footer li:before {
     width: 30%;
     float: right;
     text-align: center;
+}
+
+
+
+@media only screen and (max-width: 1354px) 
+{
+    .seccion1
+    {
+        height: 900px;
+    }
+    .descripcion 
+    {
+        width: 100%;
+        margin: 0 0 0 0;
+    }
+    .descripcion h1
+    {
+        text-align: center;
+        font-size: 300%;
+    }
+    .descripcion ul
+    {
+        text-align: center;
+        font-size: 80%;
+        margin: 0 2.5% 0 2.5%;
+    }
+
+    .formulario
+    {
+        display: inline;
+        margin-right: 30%;
+        width: 35%;
+    }
+    
+    .seccion2
+    {
+        height:600px;
+        
+    }
+    .columnas
+    {
+        height: 50%;
+        width: 35%;
+        text-align: center;
+        margin-top: 3%;
+    }
+
+    .seccion3
+    {
+        align-items: center;
+        min-height: 360px;
+        background-color: rgba(155, 177, 177, 0.082);
+    }
+
+    .descripcionV
+    {
+        width: 80%;
+        float: none;
+        text-align: center;
+    }
+
+
+    .videoV video
+    {
+        width: 90%;
+        margin-left: 2.5%;
+        margin-top: 2.5%
+    }
+
+    .seccion4
+    {
+        width: 90%;
+        min-height: 700px;
+        text-align: center;
+    }
+    .staff
+    {
+        width: 90%;
+        min-height: 700px;
+        display:block ;
+        padding-left: 20%;
+    }
+    .titulo
+    {
+        margin-top: 4%;
+        margin-bottom: 2%;
+        max-width: 100%;
+        font-size: 30px;
+    }
+    .columnaStaff
+    {
+        float: left;
+        height: 320px;
+        margin-top: 3%;
+        margin-right: 5%;
+    }
+    .staffImagenes
+    {
+        height: 185px;
+        width: 279px;
+        margin-bottom: 8%;
+        margin-right: 8%;
+    }
+
 }
