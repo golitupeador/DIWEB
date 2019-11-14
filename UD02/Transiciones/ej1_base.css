@@ -1,0 +1,56 @@
+.container{
+    position: relative;
+}
+.caja{
+  width: 180px;
+  height: 180px;
+  background-color: #30B037;
+  color: #FFF;
+  text-align: center;
+  line-height: 180px;
+  margin: 15px;
+  float: left;
+  font-size: 18px;
+  font-family: Arial;
+  
+}
+.caja1:hover{
+  transition-duration: 3s;
+  background-color: red;
+}
+.caja2:hover{
+  transition-duration: 3s;
+  font-size: 30px;
+}
+.caja3:hover{
+  transition-duration: 3s;
+  color: blue;
+}
+.caja4:hover{
+  transition-duration: 3s;
+  line-height: 40px;
+}
+.caja5:hover{
+  transition-duration: 3s;
+  border-radius: 20px;
+}
+.caja6:hover{
+  transition-duration: 3s;
+  box-shadow: 5px 10px #888888;
+}
+.caja7:hover{
+  transition-duration: 3s;
+  opacity: 50%;
+}
+.caja8:hover{
+  transition-duration: 3s;
+  border: solid 2px black;
+}
+.caja9:hover{
+  transition-duration: 3s;
+  margin: 20px 0 20px 0;
+}
+.caja10:hover{
+  transition-duration: 3s;
+  padding: 20px 0 20px 0;
+}
