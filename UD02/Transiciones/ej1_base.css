@@ -14,43 +14,76 @@
   font-family: Arial;
   
 }
-.caja1:hover{
-  transition-duration: 3s;
+.caja1{
   background-color: red;
+  transition: background-color 0.2s linear 1s; 
+}
+.caja1:hover{
+  
+  background-color: violet;
+}
+.caja2{
+  background-color: violet;
+  transition:font-size 1s;
+  
 }
 .caja2:hover{
-  transition-duration: 3s;
   font-size: 30px;
 }
+.caja3{
+  background-color: blue;
+  transition:color 1s;
+}
 .caja3:hover{
-  transition-duration: 3s;
-  color: blue;
+  color: red;
+}
+.caja4{
+  background-color: blue;
+  transition:line-height 1s;
 }
 .caja4:hover{
-  transition-duration: 3s;
   line-height: 40px;
 }
+.caja5{
+  background-color: green;
+  transition:border-radius 1s;
+}
 .caja5:hover{
-  transition-duration: 3s;
   border-radius: 20px;
+}
+.caja6{
+  background-color: rgb(207, 207, 45);
+  transition:box-shadow 1s;
 }
 .caja6:hover{
   transition-duration: 3s;
   box-shadow: 5px 10px #888888;
 }
+.caja7{
+  background-color: rgb(235, 187, 30);
+  transition:opacity 1s;
+}
 .caja7:hover{
-  transition-duration: 3s;
   opacity: 50%;
 }
+.caja8{
+  background-color: rgb(78, 78, 76);
+  transition:border 1s;
+}
 .caja8:hover{
-  transition-duration: 3s;
   border: solid 2px black;
 }
+.caja9{
+  background-color: rgb(49, 49, 49);
+  transition:margin 1s;
+}
 .caja9:hover{
-  transition-duration: 3s;
   margin: 20px 0 20px 0;
 }
+.caja10{
+  background-color: rgb(0, 0, 0);
+  transition:padding 1s;
+}
 .caja10:hover{
-  transition-duration: 3s;
   padding: 20px 0 20px 0;
 }

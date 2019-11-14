@@ -1,0 +1,90 @@
+.container{
+    position: relative;
+  }
+  .caja{
+    width: 180px;
+    height: 180px;
+    background-color: #30B037;
+    color: #FFF;
+    text-align: center;
+    line-height: 180px;
+    margin: 15px;
+    float: left;
+    font-size: 18px;
+    font-family: Arial;
+  }
+
+  .caja1{
+    background-color: red;
+    transition: transform 0.2s linear 1s; 
+  }
+  .caja1:hover{
+    
+    transform: scale(1.2,1.2);
+  }
+  .caja2{
+    background-color: violet;
+    transition:transform 0.2s linear 1s;
+    
+  }
+  .caja2:hover{
+    transform: rotate(45deg);
+  }
+  .caja3{
+    background-color: blue;
+    transition:transform 0.2s linear 1s;
+  }
+  .caja3:hover{
+    transform: skew(15deg, 15deg);
+  }
+  .caja4{
+    background-color: blue;
+    transition:transform 0.2s linear 1s;
+  }
+  .caja4:hover{
+    transform: skewX(25deg)
+  }
+  .caja5{
+    background-color: green;
+    transition:transform 0.2s linear 1s;
+  }
+  .caja5:hover{
+    transform: skewY(45deg)
+  }
+  .caja6{
+    background-color: rgb(207, 207, 45);
+    transition:transform 0.2s linear 1s;
+  }
+  .caja6:hover{
+    transition-duration: 3s;
+    transform: translate(240px, 140px);
+  }
+  .caja7{
+    background-color: rgb(235, 187, 30);
+    transition:transform 0.2s linear 1s;
+  }
+  .caja7:hover{
+    transform: translateX(100px);
+  }
+  .caja8{
+    background-color: rgb(78, 78, 76);
+    transition:transform 0.2s linear 1s;
+  }
+  .caja8:hover{
+    transform: translatey(100px);
+  }
+  .caja9{
+    background-color: rgb(49, 49, 49);
+    transition:transform 0.2s linear 1s;
+  }
+  .caja9:hover{
+    transform: perspective(1200px);
+  }
+  .caja10{
+    background-color: rgb(0, 0, 0);
+    transition:transform 0.2s linear 1s;
+  }
+  .caja10:hover{
+    transform: matrix(1, 2, -1, 1, 80, 80);
+   
+  }
