@@ -39,7 +39,7 @@
   }
   .caja4{
     background-color: blue;
-    transition:transform 0.2s linear 1s;
+    transition:transform 0.2s ease-in-out 1s;
   }
   .caja4:hover{
     transform: skewX(25deg)
@@ -75,16 +75,22 @@
   }
   .caja9{
     background-color: rgb(49, 49, 49);
-    transition:transform 0.2s linear 1s;
+    transition:transform 0.2s ease-in-out 1s;
   }
   .caja9:hover{
-    transform: perspective(1200px);
+    transform: perspective(10px) rotateX(20deg);
   }
   .caja10{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(49, 49, 49);
     transition:transform 0.2s linear 1s;
   }
   .caja10:hover{
-    transform: matrix(1, 2, -1, 1, 80, 80);
-   
+    transform: perspective(10px) rotateY(20deg);
+  }
+  .caja11{
+    background-color: rgb(0, 0, 0);
+    transition:transform 0.2s ease-in-out 1s;
+  }
+  .caja11:hover{
+    transform: matrix(1, 0, 0.5, 1, 150, 0);
   }
