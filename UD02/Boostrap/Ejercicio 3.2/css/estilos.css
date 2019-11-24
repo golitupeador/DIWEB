@@ -1,0 +1,44 @@
+.head
+{
+    background-color: rgb(25, 246, 25);
+}
+.columnas
+{
+    background-color: red;
+}
+
+.footer
+{
+    background-color: yellow;
+}
+
+/*Media query sm tablets*/
+@media (max-width: 768px) 
+{
+    .head
+    {
+        background-color: cyan;
+    }
+    .columnas:nth-child(3)
+    {
+        background-color: rgb(25, 246, 25);
+    }
+}
+
+/*Media query xs moviles*/
+@media (max-width: 576px) 
+{
+    .head
+    {
+        background-color: rgb(179, 91, 88);
+    }
+    .columnas:nth-child(2)
+    {
+        background-color: cyan;
+    }
+    .columnas:nth-child(3)
+    {
+        background-color: red;
+    }
+}
+
