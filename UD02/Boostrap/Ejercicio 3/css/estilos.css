@@ -1,5 +1,10 @@
-.columna
+.grises
 {
     background-clip: content-box;
-    
+    height: 122px;
+}
+.amarillos
+{
+    background-clip: content-box;
+    height: 88px;
 }
