@@ -1,0 +1,18 @@
+.head
+    {
+        background-color: rgb(0, 60, 255);
+        color: blanchedalmond;
+    }
+
+/*Media query sm tablets*/
+@media (max-width: 768px) 
+{
+
+}
+
+/*Media query xs moviles*/
+@media (max-width: 576px) 
+{
+
+}
+
