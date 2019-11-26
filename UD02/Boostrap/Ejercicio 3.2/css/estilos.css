@@ -5,11 +5,14 @@
 .columnas
 {
     background-color: red;
+    background-clip: content-box;
+    height: 200px;
 }
 
 .footer
 {
     background-color: yellow;
+    background-clip: content-box;
 }
 
 /*Media query sm tablets*/
@@ -22,6 +25,11 @@
     .columnas:nth-child(3)
     {
         background-color: rgb(25, 246, 25);
+        height: 100px;
+    }
+    .columnas
+    {
+        height: 120px;
     }
 }
 
