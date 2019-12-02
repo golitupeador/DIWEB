@@ -1,0 +1,103 @@
+body{
+    background-color: grey;
+}
+
+nav
+{
+    background-color:rgba(42, 42, 42, 0.733);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(221, 221, 0);
+}
+
+.navbar-dark .navbar-nav .active>.nav-link
+{
+    color: yellow;
+}
+
+.dropdown-item
+{
+    color: yellow;
+    background-color: grey;
+}
+.dropdown-menu
+{
+    background-color: grey;
+}
+.btn
+{
+    color: yellow;
+}
+
+.carousel-inner img {
+    margin: auto;
+  }
+
+#carrosel{
+    width: 60%; 
+    margin: 0 auto;
+    border: yellow solid 1px;
+    height: 30%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.carousel-inner
+{
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+.img{
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}
+.aliados
+{
+    margin:auto;
+    margin-top: 2%;
+    width: 80%;
+}
+
+.nav-tabs .nav-link {
+    border: 2px solid  yellow;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+
+}
+.nav-tabs {
+    border-bottom: 1px solid yellow;
+}
+a {
+    color: #fbff00;
+    text-decoration: none;
+    background-color: transparent;
+}
+.contenido
+{
+    width: 60%;
+    margin:auto;
+    margin-top: 1%;
+    color: yellow;
+}
+.form-group div
+{
+    margin:auto;
+}
+
+legend
+{
+    color: yellow;
+}
+
+.btn-primary {
+    background-color: #000000;
+    border-color: #ffee00;
+}
+
+.table
+{
+    color: yellow;
+}
