@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Titulo---->
+    <!---------------------- Titulo------------------------------->
     <title>Examen</title>
 
-    <!-- Estilos personalizados-->
-    <link rel="stylesheet" type="text/css" href="./estilos/Actividad_02.css">
+    <!------------------------- Estilos personalizados--------------->
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <!---------------------- FontAwesome--------------------------------->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
-    <!-- Tipografia-->
+    <!---------------------- Tipografia--------------------------------->
+                                    <!----- Roboto----->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+                                    <!----- Lato----->
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
-    <!-- FAVICON-->
+
+
+    <!----------------------------- FAVICON--------------------->
     <link rel="shortcut icon" href="css/images/favicon.ico">
     <link rel="android-chrome" sizes="512x512" href="css/images/android-chrome-512x512.ico">
     <link rel="android-chrome" sizes="192x192" href="css/images/android-chrome-192x192.png">
@@ -25,20 +32,139 @@
 
 
 </head>
-<body>
-    <header>
-        
+<body class="margin-auto">
+    <!---------------------------- Cabecera-------------------------->
+    <header class="header margin-auto">
+        <!------------ Logotipo-------------->
+        <a href="index.html" class="logo"><img src="css/images/logo.png"></img></a>
+        <!------------ Navegador con su clase roboto para usarla-------------->
+        <nav class="header-right font-roboto">
+            <ul>
+                <li class=""><a href="#">Home</a></li>
+                <li class=""><a href="#acercaDe">Acerca de</a></li>
+                <li class=""><a href="#servicios">Servicios</a></li>
+                <li class=""><a href="#paquetes">Paquetes personalizados</a></li>
+            </ul>
+        </nav>
+        <div id="cajaContacto"><a href="#contacto">Contacto</a></div>
     </header>
 
-    <main>
-        <section></section>
+    <main class="margin-auto">
+        <!------------ El width seria diferente entre el container imagen y container-------------->
+        <section class="containerImagen">
+            <!------------ En esta clase la imagen de background y color de fuente-------------->
+            <div class="catering">
+                <span >Servicios de Catering para toda ocasion</span>
+            </div>
+        </section>
 
+        <section id="acercaDe" class="container">
+            <h1>Quienes somos</h1>
+            <!------------ Caja para poder poner la imagen y el span juntos-------------->
+            <div>
+                <img src="css/images/buffet-section.jpg"></img>
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet sollicitudin eros. Suspendisse at quam metus. Aliquam sollicitudin massa quis felis luctus, vel iaculis lectus finibus. Quisque ornare nulla condimentum aliquet egestas. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam luctus malesuada orci elementum auctor. Proin purus est, vestibulum sed scelerisque in, tincidunt a sem. Sed turpis magna, sodales a elementum vel, sodales id elit. Donec congue bibendum lacus et interdum. Ut sagittis congue odio, sit amet varius arcu. Phasellus sagittis erat vitae quam mollis porttitor. Donec ac mauris malesuada, commodo lectus in, fringilla lectus. Sed volutpat sem a pharetra sagittis.
 
+                        Nunc aliquet augue non arcu sagittis suscipit. Nam iaculis pulvinar elementum. Donec imperdiet rutrum sem vel egestas. Nulla tincidunt ut orci ut pellentesque. Morbi ac metus nec metus auctor consequat vitae eu lorem. Etiam at libero ultrices, euismod elit at, hendrerit sapien. Nunc cursus, nisi sit amet aliquam pharetra, diam nunc facilisis metus, in maximus purus turpis in nibh. Cras porttitor metus quis arcu condimentum, in consectetur est tempus. Nam nec felis blandit, malesuada lectus nec, interdum ante. Mauris eget varius elit. Maecenas dignissim sollicitudin magna eu congue. Donec vitae felis nunc. Nullam a nisi ut libero pulvinar aliquam.
+                        
+                        Nunc in tellus consectetur, feugiat sapien egestas, tempor ex. Fusce ut sapien lorem. Sed ultrices faucibus condimentum. Donec vel ultrices ex, in condimentum urna. Morbi tempus erat lectus, id sagittis eros vestibulum ac. Aenean volutpat massa vel venenatis auctor. Nam tortor risus, imperdiet nec nibh vel, pretium tristique urna. Aliquam arcu ex, euismod at quam commodo, ullamcorper vestibulum sem. Etiam pulvinar quam ipsum, vel viverra turpis pellentesque fermentum. Nullam tempus est vitae arcu rhoncus, eget ornare arcu consectetur. Ut porttitor tellus augue, id scelerisque velit auctor et.
+                </span>
+            </div>
+        </section>
 
+        <!------------ El width seria diferente entre el container imagen y container-------------->
+        <section class="containerImagen">
+            <!------------ En esta clase la imagen de background y color de fuente-------------->
+            <div class="catering">
+                <span >Proveemos soluciones de catering premium para todas las ocasiones</span>
+            </div>
+        </section>
+
+        <section id="servicios" class="container">
+                <h1>Nuestros Servicios</h1>
+                <div class="divisor"></div>
+                <!------------ Caja para poner dentro tres cajas con la imagen y el texto juntos a lo card-------------->
+                <div>
+                    <div>
+                        <img src="css/images/buffet-section.jpg"></img>
+                        <span>WALL OF TEXT</span>
+                    </div>
+
+                    <div>
+                        <img src="css/images/buffet-section.jpg"></img>
+                        <span>WALL OF TEXT</span>
+                    </div>
+
+                    <div>
+                        <img src="css/images/buffet-section.jpg"></img>
+                        <span>WALL OF TEXT</span>
+                    </div>
+                </div>
+                
+        </section>
+
+        <section id="paquetes" class="container">
+            <h1>Paquetes de catering</h1>
+            <div class="divisor"></div>
+            <p>Parrafo</p>
+            <!------------ Listas con fot awesome------------->
+            <div>
+                <ul class="fa-ul">
+                    <li><i class="fa-li fa fa-check-square"></i></li>
+                    <li><i class="fa-li fa fa-check-square"></i></li>
+                    <li><i class="fa-li fa fa-check-square"></i></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="fa-ul">
+                    <li><i class="fa-li fa fa-check-square"></i></li>
+                    <li><i class="fa-li fa fa-check-square"></i></li>
+                    <li><i class="fa-li fa fa-check-square"></i></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="fa-ul">
+                    <li><i class="fa-li fa fa-check-square"></i></li>
+                    <li><i class="fa-li fa fa-check-square"></i></li>
+                    <li><i class="fa-li fa fa-check-square"></i></li>
+                </ul>
+            </div>
+
+        </section>
+        <section id="contacto" class="container">
+            <h1>Contacto</h1>
+            <div class="divisor"></div>
+            <div>
+                <span>Direccion</span>
+                <span>Direccion</span>
+                <span>Direccion</span>
+            </div>
+            <div>
+                <form action="">
+                    <span>Nombre:</span> <input type="text" name="nombre" id="">
+                    <span>Telefono:</span> <input type="tel" name="telefono" id="">
+                    <span>Email:</span> <input type="email" name="email" id="">
+                    </br>
+                    <span>Escribe tu comentario:</span>
+                    </br>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <br>
+                    <button class="boton-enviar" type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
     </main>
 
-    <footer>
-
+    <footer >
+        <!------------ Redes sociales------------->
+        <div>
+             
+            <img src=""></img>
+            <img src=""></img>
+            <img src=""></img>
+        </div>
+        <!------------ Copyright con border top------------->
+        <span id="copyright">Copyright</span>
     </footer>
 </body>
 </html>

@@ -1,12 +1,119 @@
-/**Resteo de margenes y padding**/
+/*No he conseguido posicionar todo arriba con flex y que me ocupase el 100% del width para asi ir posicionando todo abajo*/
 
+
+/**Resteo de margenes y padding**/
 * 
 {
     margin: 0; padding: 0;
 }
 
-/**Uso de font family**/
-body 
+/**Clase para usarla roboto*/
+.font-roboto
 {
     font-family: 'Roboto', sans-serif;
+}
+
+/**Clase para usarla lato*/
+.font-lato
+{
+    font-family: 'Lato', sans-serif;
+}
+/**Clase para uso de margin auto**/
+.margin-auto
+{
+    margin: auto;
+}
+
+body 
+{
+    width: 90%;
+    display:flex;
+
+}
+
+
+/**Anchura para todas las secciones de la pagina**/
+header, main, footer 
+{
+    display: flex;
+}
+
+/**Le quitamos a la lista los estilos**/
+nav ul
+{
+    list-style: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: block;
+}
+
+/**Le ponemos la linea debajo en el hover de la lista**/
+nav ul li:hover
+{
+border-bottom: 1px solid red;
+
+}
+
+nav li a
+{
+    display: block;
+}
+
+/**Le ponemos un border a contactp**/
+#cajaContacto
+{
+    border: 1px solid red;
+}
+#cajaContacto a
+{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+header
+{
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+/**Modificacion al ancho del modelo de cajas al borde de la caja
+No estoy seguro de a cual pides aplicarselo**/
+div
+{
+    border-style: none;
+    border-width: none;
+}
+
+.header-right
+{
+    
+    min-height: 120px;
+    font-weight: 550;
+    
+}
+
+li a
+{
+    position: relative;
+    color: black;
+    text-decoration: none;
+    margin-left: 15%;
+    
+}
+
+.clear
+{
+    clear: both;
+}
+
+.containerImagen
+{
+    width: 90%;
+}
+.container
+{
+    width: 80%;
 }
