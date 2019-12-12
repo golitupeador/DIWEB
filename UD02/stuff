@@ -1,0 +1,8 @@
+[8:22, 12/12/2019] Sito: position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+[8:22, 12/12/2019] Sito: background-image: url(img_parallax.jpg);
+    min-height: 100%;
