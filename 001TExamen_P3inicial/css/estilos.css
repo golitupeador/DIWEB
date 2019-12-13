@@ -1,0 +1,504 @@
+/* ESTILOS GENERALES */
+html,
+body {
+  height: 100%;
+}
+/* Modificar el modelo de cajas de CSS */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* Resetear márgenes y padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+.container {
+  width: 90%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+/* ESTILOS DE LOS CONTENIDOS */
+/* Barra de navegación */
+#navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main-nav {
+  display: flex;
+  list-style: none;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+}
+#main-nav li {
+  padding: 12px 0.85em;
+}
+#main-nav li a {
+  color: #0f0f0f;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  padding-bottom: 12px;
+}
+#main-nav li a:hover {
+  border-bottom: 2px solid #ff0000;
+}
+#main-nav + a {
+  color: #0f0f0f;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  border: 1px solid #ff0000;
+  padding: 12px 3em;
+  transition: all 0.5s;
+}
+
+#main-nav + a:hover {
+  background-color: #ff0000;
+  color: #fff;
+  transition: all 0.5s;
+}
+nav {
+  padding: 12px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/*Estilos para conseguir la imagen de background con parralax y color con gradient, ademas de indicarle tamaño fuente y alinear*/
+#seccionPrimera
+{
+    height: 600px;
+    background-image:  linear-gradient(to bottom,rgb(0, 0, 0), rgba(3, 3, 3, 0.514)), url(../images/buffet-1.jpg);
+    background-repeat:  round;
+    background-size:cover;
+    background-attachment: fixed;
+    color: yellow;
+    text-shadow: 2px 2px #2f2f2f;
+    font-size: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Estilos al h1 de la seccion primera*/
+#seccionPrimera h1
+{
+  text-align: center;
+  margin: auto;
+  text-transform: uppercase;
+}
+
+/*Propiedades comunes para los titulos de las secciones con id*/
+#acercade, #servicios, #paquetes
+{
+  text-align: center;
+  margin: auto;
+  margin-top: 3%;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+/*Le damos las propiedades correspondientes al divisor*/
+.divider
+{
+  width: 5%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 3%;
+  border: 0;
+  border-top: 1px solid rgb(255, 0, 0);
+}
+
+
+#seccionSegunda
+{
+  align-items: flex-start;
+  width: 80%;
+}
+
+/*Le ponemos flex a todos los ids de secciones para no repetir*/
+#seccionTercera, #seccionSegunda, #seccionPrimera, #seccionCuarta, #seccionQuinta
+{
+  display: flex;
+}
+
+#seccionSegunda p
+{
+  margin: 0 0 2% 2%;
+}
+
+/*Le ponemos Las propiedades para como antes, crear efecto paralax y gradiente*/
+#seccionTercera
+{
+  margin-top: 3%;
+  height: 400px;
+  background-image:  linear-gradient(to bottom,rgb(0, 0, 0), rgba(3, 3, 3, 0.514)), url(../images/food-table.jpg);
+  color: #fff;
+  background-repeat:  round;
+  background-size:cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+}
+
+#seccionTercera p
+{
+  margin: auto;
+}
+
+#seccionCuarta
+{
+  align-items: flex-start;
+  text-align: center;
+  margin-bottom: 4%;
+
+}
+
+/*Le ponemos sombra a esta seccion(laparecida a las cards*/
+#seccionCuarta div
+{
+  height: 85%;
+  width: 30%;
+  margin: auto;
+  box-shadow: 0px 9px 19px -2px rgba(0,0,0,0.24);
+}
+
+#seccionCuarta div img
+{
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#seccionCuarta div h3
+{
+  
+  padding-bottom: 2%;
+  margin-top: 2%;
+  font-weight: 100;
+}
+
+#paquetes
+{
+  padding-top: 2%;
+}
+
+/*Usamos este selector para poder obtener el p de id paquetes*/
+#paquetes ~ p
+{
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+#seccionQuinta
+{
+
+  align-items: flex-start;
+  text-align: center;
+}
+/*Le quitamos los estilosa la lita y le damos un border*/
+#seccionQuinta ul
+{
+  list-style: none;
+  border: 1px solid rgb(109, 109, 109);
+}
+
+/*Cogemos la seccion 5 que no tiene id a traves de este selector para poder aplicarle estas propiedades*/
+section:nth-child(5)
+{
+  background-color: rgba(231, 230, 230, 0.192);
+  width: 90%;
+  margin:auto;
+  padding-bottom: 3%;
+}
+
+.col
+{
+  width: 30%;
+  background-color: #fff;
+  margin: auto;
+}
+
+.col li
+{
+  padding: 4%;
+
+}
+
+/*Aplicamos color gris al segundo elemento de la lsita*/
+.col li:nth-child(2)
+{
+  background-color: rgba(194, 194, 194, 0.513);
+}
+
+/*Aplicamos los bordes a la lista a partir del 3 elemento*/
+.col li:nth-child(n+3)
+{
+  border-top: 1px solid rgb(211, 211, 211);
+}
+
+/*Cambiamos el color de la bullet */
+.fas
+{
+  color: green;
+}
+
+/*Le damos una transicion a la lista*/
+.col ul
+{
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/*Le decimos comova a ser la boxshadow interna*/
+.col ul:hover
+{
+  box-shadow: inset 0px 0px 10px;
+}
+
+
+
+/*********************************************TERCER EXAMEN sin tiempo de comentarios***********************************************/
+
+#numeroTelefono
+{
+  display: none;
+}
+
+#contacto
+{
+  margin: auto;
+}
+
+section:nth-child(6)
+{
+  align-items: flex-start;
+  text-align: center;
+  width: 90%;
+  margin:auto;
+  padding-bottom: 3%;
+}
+
+#addressBox
+{
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+
+#addressBox p
+{
+  padding-bottom: 1%;
+}
+
+.col-input
+{
+  width: 33%;
+  
+}
+
+
+form
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;   
+  align-items: stretch;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+label
+{
+  display: block;
+}
+
+.col-input input
+{
+  width: 80%;
+  padding: 1%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+
+#col-text
+{
+  width: 100%;
+}
+
+#mensaje
+{
+  width: 100%;
+  margin-top: 1%;
+}
+
+#col-text ~ input
+{
+  background-color: #35B81E;
+  margin-top: 2%;
+  color: white;
+  width: 10%;
+  border-radius: 20px;
+  min-height: 30px;
+}
+
+
+input, textarea {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  outline: none;
+  border: 1px solid #DDDDDD;
+}
+ 
+input:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+#pieDePagina
+{
+  padding:1% 0 1% 0;
+}
+
+.fab
+{
+  color: #fff;
+  text-decoration: none;
+}
+#pieDePagina, #copyright
+{
+  background-color: rgb(44, 44, 44);
+  align-items: flex-start;
+  text-align: center;
+  margin:auto;
+  color: #fff;
+}
+#copyright
+{
+  width: 90%;
+  max-width: 1366px;
+  border-top: 0.5px solid rgb(90, 90, 90);
+}
+
+
+/***********************************MEDIA QUERYS****************************************************/
+
+
+
+@media only screen and (max-width: 1200px) 
+{
+  p
+  {
+    font-size: 1.04rem;
+  }
+}
+@media only screen and (max-width: 980px) 
+{
+  #seccionSegunda img
+  {
+    display: none;
+  }
+  #seccionSegunda
+  {
+    text-align: center;
+  }
+
+  #seccionSegunda p
+  {
+    width: 100%;
+    margin: 0 0 2% 0;
+  }
+
+  .col li:nth-child(n+3)
+  {
+    font-size: 0.7rem;
+  }
+
+  form
+  {
+    font-size: 0.95rem;
+  }
+}
+
+
+@media only screen and (max-width: 960px) 
+{
+  #main-nav li a
+  {
+    font-size: 0.95rem;
+  }
+
+  .col li:nth-child(-n+3)
+  {
+    font-size: 1.1rem;
+  }
+  .col li:nth-child(n+3)
+  {
+    font-size: 0.60rem;
+  }
+}
+
+@media only screen and (max-width: 660px) 
+{
+  #main-nav
+  {
+    display: none;
+  }
+
+  #navigation > :last-child
+  {
+    display: none;
+  }
+
+  #numeroTelefono
+  {
+    display: flex;
+    margin: auto;
+    font-size: 1rem;
+    color: #ff0000;
+  }
+
+  #seccionPrimera
+  {
+    font-size: 3.3rem;
+  }
+
+  #seccionPrimera, #seccionSegunda,#seccionTercera,#seccionCuarta,#seccionQuinta
+  {
+    display: inline-block;
+    margin-left: 9%;
+  }
+  .col
+  {
+    width: 100%;
+    margin-bottom: 6%;
+  }
+
+  form 
+  {
+    display: inline-block;
+    width: 100%;
+  }
+  .col-input 
+  {
+    width: 70%;
+  }
+}
+
+/*************ACTIVIDAD ADICIONAL************/
+
+/*#navigation
+{ 
+  position: fixed; 
+  top: 0; 
+}*/
