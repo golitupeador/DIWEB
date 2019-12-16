@@ -276,6 +276,7 @@ section:nth-child(5)
 #contacto
 {
   margin: auto;
+  margin-top: 2%;
 }
 
 section:nth-child(6)
