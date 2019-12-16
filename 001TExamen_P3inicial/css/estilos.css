@@ -348,6 +348,7 @@ label
   width: 10%;
   border-radius: 20px;
   min-height: 30px;
+  min-width: 70px;
 }
 
 
@@ -413,6 +414,7 @@ input:focus, textarea:focus {
     text-align: center;
   }
 
+  /*Si quieres que el parrafo ocupe el 100% del navegador, se le pone el 100% a la seccion que lo ocupa*/
   #seccionSegunda p
   {
     width: 100%;
@@ -473,11 +475,23 @@ input:focus, textarea:focus {
     font-size: 3.3rem;
   }
 
-  #seccionPrimera, #seccionSegunda,#seccionTercera,#seccionCuarta,#seccionQuinta
+  /*Esto lo modifico para que  se vea mejor las listas, que se veian muy poco*/
+.col li:nth-child(n+3) {
+    font-size: 0.80rem;
+}
+  #seccionQuinta, #seccionCuarta
   {
-    display: inline-block;
-    margin-left: 9%;
+    flex-wrap: wrap;
+
   }
+
+  #seccionCuarta div
+  {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+
   .col
   {
     width: 100%;
@@ -495,10 +509,30 @@ input:focus, textarea:focus {
   }
 }
 
+
+section:nth-child(5)
+{
+  width: 100%;
+}
+
+
+#seccionQuinta
+{
+  width: 100%;
+}
+
 /*************ACTIVIDAD ADICIONAL************/
 
-/*#navigation
+header
 { 
   position: fixed; 
   top: 0; 
-}*/
+  background-color: #fff;
+  width: 100%;
+  /*z-index:30;*/
+}
+h1
+{
+  /*z-index:40;*/
+}
+
