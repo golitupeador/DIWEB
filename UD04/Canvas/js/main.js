@@ -7,6 +7,7 @@ const KEY_UP=38;
 const KEY_RIGHT=39;
 const KEY_DOWN=40;
 const KEY_P= 80;
+var gameOver=false;
 
 function iniciar(){
     canvas=document.getElementById('lienzo');
@@ -44,16 +45,24 @@ function accionesJuego(){
     //verificaremos si el player ha salido del canvas, en cuyo caso, haremos que aparezca por el otro lado:
     if(x>=canvas.width)
     {
-        x=0;
+        x=590;
+        x=x;
+        gameOver=true;
     }else if(y>=canvas.height)
     {
-        y=0;
+        y=390;
+        y=y;
+        gameOver=true;
     }else if(y<0)
     {
-        y=400;
+        y=0;
+        y=y;
+        gameOver=true;
     }else if(x<0)
     {
-        x=600;
+        x=0;
+        x=x;
+        gameOver=true;
     }
     
         
@@ -69,6 +78,11 @@ function pintarLienzo(lienzo){
         lienzo.font = "40px Georgia";
         lienzo.fillText("Pause!", canvas.width/2-40, canvas.height/2); 
     }
+    if(gameOver==true)
+    {
+        lienzo.font = "40px Georgia";
+        lienzo.fillText("Has perdido", canvas.width/2-40, canvas.height/2);
+    }
 }
 
 function pintarBordes(lienzo)
@@ -76,6 +90,12 @@ function pintarBordes(lienzo)
     lienzo.lineWidth = 2;
     lienzo.strokeStyle="#FF0000";
     lienzo.strokeRect(0, 0, canvas.width, canvas.height);//for white background
+}
+
+function finJuego(lienzo)
+{
+    lienzo.font = "40px Georgia";
+    lienzo.fillText("Has perdido", canvas.width/2-40, canvas.height/2);
 }
 
 document.addEventListener('keydown', function(evt) { 
