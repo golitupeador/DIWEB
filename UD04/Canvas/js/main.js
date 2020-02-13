@@ -18,6 +18,7 @@ function run(){
     requestAnimationFrame(run); //animación optimizada
     accionesJuego();
     pintarLienzo(lienzo);
+    pintarBordes(lienzo);
 }
 function accionesJuego(){
     //Modificamos la dirección que tendrá nuestro player en función de la tecla presionada   
@@ -70,9 +71,11 @@ function pintarLienzo(lienzo){
     }
 }
 
-function letreroPausa(lienzo)
+function pintarBordes(lienzo)
 {
-    
+    lienzo.lineWidth = 2;
+    lienzo.strokeStyle="#FF0000";
+    lienzo.strokeRect(0, 0, canvas.width, canvas.height);//for white background
 }
 
 document.addEventListener('keydown', function(evt) { 
