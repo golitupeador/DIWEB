@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="css/estilos.css" media="screen" />
+        <audio autoplay src="../musica/Música.m4a"></audio>
+        <script>
+            function loadCanvas() {
+                var canvas = document.getElementById('my_canvas');
+                if(canvas.getContext) {
+                    var ctx = canvas.getContext('2d');
+                    ctx.beginPath();
+                    ctx.arc(245,160,150,0,Math.PI*2,true);
+                    ctx.fillStyle = "rgb(255,255,204)";
+                    ctx.fill();
+                    ctx.stroke();
+                    ctx.fillStyle = "black";
+                    ctx.beginPath();
+                    ctx.arc(200,110,15,0,Math.PI*2,true);
+                    ctx.fill();
+                    ctx.beginPath();
+                    ctx.arc(280,110,15,0,Math.PI*2,true);
+                    ctx.fill();
+                    ctx.beginPath();
+                    ctx.arc(240,170,20,4,Math.PI*2,true);
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.arc(240,190,60,0,Math.PI,false);
+                    ctx.stroke();
+                    } else {
+                        document.getElementById('my_canvas').style.display = 'none';
+                        document.getElementById('no-canvas').style.display = 'block';
+                }
+            }
+        </script>
+	</head>
+	<body onload="loadCanvas();">
+        
+
+
+                <section>
+                    <header>
+                        <h1>Formulario de alquiler</h1>
+                    </header>
+                    <p>
+                        <form>
+                            <label for="contact_name">Nombre:</label>
+                            <input id="contact_name" placeholder="Tu nombre"
+                            autofocus>
+                            <br />
+                            <label for="contact_email">E-mail:</label>
+                            <input type="email" id="contact_email" placeholder="Tu e-mail">
+                            <br />
+                            <label for="contact_phone">Telefono:</label>
+                            <input type="tel" id="contact_phone" placeholder="xxx-xx-xx-xx">
+                            <br />
+                            <label for="contact_callback">Numero de cuenta:</label>
+                            <input type="datetime" id="contact_callback" placeholder="IMPORTANTE"><br />
+
+                            <br />
+                            <br />
+                            <input type="submit" value="Comenzar la operacion">
+                        </form>
+                    </p>
+                </section>
+
+
+
+                        
+            
+                        
+
+
+            </article>
+
+
+
+            <footer>
+                <p>&copy; 20019 DSUE. Todos los derechos reservados.</p>
+            </footer>
+ 
+
+	</body>
+</html>

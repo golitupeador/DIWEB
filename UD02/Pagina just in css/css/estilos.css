@@ -1,0 +1,61 @@
+body
+{ 
+    width: 100%;
+    min-height: 800px;
+    margin:auto;
+    font-family:Amatic SC;
+}
+
+header
+{
+    width: 100%;
+    min-height: 120px;
+    background-color: rgb(224, 224, 224);
+}
+
+.header-right
+{
+    
+    min-height: 120px;
+    min-width: 40%;
+    float: right;
+    display:inline-block;
+    font-weight: 550;
+    
+}
+
+ul
+{
+    list-style: none;
+}
+
+.menu-it{
+    float: left;
+    display:inline-block;
+    margin-top:30px;
+}
+li a
+{
+    position: relative;
+    color: black;
+    text-decoration: none;
+    margin-left: 35px;
+    color: green;
+    
+}
+
+
+.logo
+{
+    display:inline-block;
+    min-height: 120px;
+    min-width: 20%;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 800;
+   
+}

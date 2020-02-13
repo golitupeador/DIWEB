@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+	<head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/estilos.css" media="screen" />
+        <link href="css/responsive.css" rel="stylesheet" >
+        <script src="../imagenes/modernizr.custom.js"></script>
+        <script src="../imagenes/jquery.dlmenu.js"></script>
+        <script>$(function(){$('#dl-menu').dlmenu({animationClasses:{classin:'dl-animate-in-1', classout:'dl-animate-out-1'}});});</script>
+        <audio autoplay src="../musica/Música.m4a"></audio>
+	</head>
+	<body>
+            <header>
+                    <div id="cabzclasica">
+                        <div id="ancho">
+                                <div id="logo"><img id=imglogo src="../imagenes/logosmalle2r.png"></div>
+                                <div id="logomid">
+                                    <h2> Agencia de la propiedad inmobiliaria</h2>
+                                    <img src="../imagenes/aga.png"></img>
+                                    <h2>Te dejamos sin un euro</h2>
+                                </div>
+                                <div id="logoright">
+                                    <p>Tlf:XXX-XX-XX-XX</p>
+                                    </br>
+                                    <p>Movil:XXX-XX-XX-XX</p>
+                                    </br>
+                                    <div id="twitter">
+                                        <a href="http://www.twitter.com"><img class="redsocial" src="../imagenes/twitter.png"></img></a>
+                                        <a href="http://www.facebook.com"><img class="redsocial" src="../imagenes/facebook.png"></img></a>
+                                        <a href="https://plus.google.com/discover"><img class="redsocial" src="../imagenes/gplus.png"></img></a>
+                                    </div>
+                                </div>
+                        </div>
+        
+        
+                        <div id="clear"></div>
+        
+                        <nav>
+                            <button class="nav_boton" onclick="accion()">Menu</button>
+                            <a href="../index.html"class="nav_enlace desaparece">Comprar</a>
+                            
+                            <a href="../Alquilar/Alquilar.html"class="nav_enlace desaparece">Alquilar</a>
+                            <a href="../Vender/vender.html"class="nav_enlace desaparece">Vender</a>
+                            <a href="../Quienes somos/qsomos.html"class="nav_enlace desaparece">Quienes somos</a>
+                            <a href="contacto.html"class="nav_enlace desaparece">Contacto</a>
+                        </nav>
+                    </div>
+        
+                    <div id="cabzmovil">
+                        <div id="cabeceraMovil">
+        
+                            <div class="nav">
+                                <div id="dl-menu" class="dl-menuwrapper">
+                                    <a class="dl-trigger" href="#"><img src="../imagenes/menuoriginal.svg" alt="Menú" /></a>
+                                    <ul class="dl-menu">
+                                        <li><a href="../index.html">Comprar</a>
+        
+                                        </li>
+                                        <li><a href="../Alquilar/Alquilar.html">Alquilar</a></li>
+                                        <li><a href="#">Vender</a>
+                                            <ul class="dl-submenu">
+                                                <li><a href="../Vender/vender.html">Requesitos</a></li>
+                                                <li><a href="#">Enviar datos</a></li>
+                                            </ul></li>
+                                        <li><a href="../Quienes somos/qsomos.html">Quienes somos</a></li>
+                                        <li><a href="contacto.html">Contacto</a></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                            
+                        </div>
+                    </div>
+        
+        
+                </header>
+
+            <section id="formulario">
+                    <form action="#" class="contact_form" method="post">
+                            <ul>
+                            <li>
+                                        <h2>
+                            Formulario de contacto</h2>
+                            </li>
+                            <li>
+                                       <label for="nombre">Nombre:</label>
+                                       <input placeholder="Nombre" required="" type="text" />
+                                   </li>
+                            <li>
+                                       <label for="email">Email:</label>
+                                       <input name="email" placeholder="email@email.com"
+                                        required="" type="email" />
+                                   </li>
+                            <li>
+                                       <label for="telefono">Telefono Contacto:</label>
+                                       <input name="tlf" placeholder="666123123"
+                                       required="" type="tel" />
+                                   </li>
+                            <li>
+                                       <label for="Mensaje">Mensaje:</label>
+                                       <textarea cols="40" name="Mensaje" required="" rows="6"></textarea>
+                                   </li>
+                            <li class="botsub">
+                                      <button class="submit" type="submit">Enviar</button>
+                                    </li>
+                            </ul>
+                            </form>
+                        
+                            
+            </section>
+            <footer>
+                <div class="slider">
+                    <ul>
+                        <li>
+                    <img src="https://www.adorama.com/alc/wp-content/uploads/2014/07/shutterstock_573796576-825x465.jpg" alt="">
+                    </li>
+                                    <li>
+                    <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201702/hand-shake-647_022017025258.jpg" alt="">
+                    </li>
+                                    <li>
+                    <img src="https://ak7.picdn.net/shutterstock/videos/13160237/thumb/1.jpg" alt="">
+                    </li>
+                                    <li>
+                    <img src="http://welltechnically.com/wp-content/uploads/2013/09/android-widescreen-wallpaper-14165-hd-wallpapers-700x300.jpg" alt="">
+                    </li>
+                                </ul>
+                </div>
+            </footer>
+        </body>

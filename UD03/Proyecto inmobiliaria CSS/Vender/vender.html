@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+	<head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/estilos.css" media="screen" />
+        <link href="css/responsive.css" rel="stylesheet" >
+        <script src="../imagenes/modernizr.custom.js"></script>
+        <script src="../imagenes/jquery.dlmenu.js"></script>
+        <script>$(function(){$('#dl-menu').dlmenu({animationClasses:{classin:'dl-animate-in-1', classout:'dl-animate-out-1'}});});</script>
+        <audio autoplay src="../musica/Música.m4a"></audio>
+	</head>
+	<body>
+        <header>
+            <div id="cabzclasica">
+                <div id="ancho">
+                        <div id="logo"><img id=imglogo src="../imagenes/logosmalle2r.png"></div>
+                        <div id="logomid">
+                            <h2> Agencia de la propiedad inmobiliaria</h2>
+                            <img src="../imagenes/aga.png"></img>
+                            <h2>Te dejamos sin un euro</h2>
+                        </div>
+                        <div id="logoright">
+                            <p>Tlf:XXX-XX-XX-XX</p>
+                            </br>
+                            <p>Movil:XXX-XX-XX-XX</p>
+                            </br>
+                            <div id="twitter">
+                                <a href="http://www.twitter.com"><img class="redsocial" src="../imagenes/twitter.png"></img></a>
+                                <a href="http://www.facebook.com"><img class="redsocial" src="../imagenes/facebook.png"></img></a>
+                                <a href="https://plus.google.com/discover"><img class="redsocial" src="../imagenes/gplus.png"></img></a>
+                            </div>
+                        </div>
+                </div>
+
+
+                <div id="clear"></div>
+
+                <nav>
+                    
+                        <button class="nav_boton" onclick="accion()">Menu</button>
+                        <a href="../index.html"class="nav_enlace desaparece">Comprar</a>                       
+                        <a href="../Alquilar/Alquilar.html"class="nav_enlace desaparece">Alquilar</a>
+                        <a href="vender.html"class="nav_enlace desaparece">Vender</a>                       
+                        <a href="../Quienes somos/qsomos.html"class="nav_enlace desaparece">Quienes somos</a>
+                        <a href="../Contacto/contacto.html"class="nav_enlace desaparece">Contacto</a>
+                    
+                </nav>
+            </div>
+
+            <div id="cabzmovil">
+                <div id="cabeceraMovil">
+
+                    <div class="nav">
+                        <div id="dl-menu" class="dl-menuwrapper">
+                            <a class="dl-trigger" href="#"><img src="../imagenes/menuoriginal.svg" alt="Menú" /></a>
+                            <ul class="dl-menu">
+                                <li><a href="../index.html">Comprar</a>
+
+                                </li>
+                                <li><a href="../Alquilar/Alquilar.html">Alquilar</a></li>
+                                <li><a href="#">Vender</a>
+                                    <ul class="dl-submenu">
+                                        <li><a href="vender.html">Requesitos</a></li>
+                                        <li><a href="#">Enviar datos</a></li>
+                                    </ul></li>
+                                <li><a href="../Quienes somos/qsomos.html">Quienes somos</a></li>
+                                <li><a href="../Contacto/contacto.html">Contacto</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                
+                    </div>
+                    
+                </div>
+            </div>
+
+
+        </header>
+
+
+        
+        <div id="clear"></div>
+        
+        <div class="contenidopag">
+
+                <section>
+                        <div id=requisitosmov>Requisitos</div>
+                        <TABLE id=tabla>
+                                <TR><TD id="titulo">Tamaño de la casa</TD><TD id="titulo">Antiguedad</TD><TD id="titulo">Precio estimado comision</TD>
+                                </TR>
+                                <TR><TD>60m2</TD><TD>Antes del 2000</TD><TD>3000€</TD>
+                                </TR>
+                                <TR><TD>60m2</TD><TD>Despues del 2000</TD><TD>6000€</TD>
+                                </TR>
+                                <TR><TD>70m2</TD><TD>Antes del 2000</TD><TD>4000€</TD>
+                                </TR>
+                                <TR><TD>70m2</TD><TD>Despues del 2000</TD><TD>8000€</TD>
+                                </TR>
+                                <TR><TD>90m2</TD><TD>Antes del 2000</TD><TD>6000€</TD>
+                                </TR>
+                                <TR><TD>90m2</TD><TD>Despues del 2000</TD><TD>10000€</TD>
+                                </TR>
+                            </TABLE>
+                            <p><span>Si sus caracteristicas no se encuentran en la tabla, no dude en consultar nuesto telefono</span></p>
+                </section>
+                
+            </div>
+        
+        <footer>
+            <div id=ayudamedesmayo>
+                <div ><img id=ayudame src="../imagenes/neko.gif"></div>
+            </div>
+
+        </footer>
+	</body>
+</html>
