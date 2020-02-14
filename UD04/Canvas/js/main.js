@@ -104,8 +104,8 @@ function crearObstaculos(lienzo)
   for(var i=0;i<5;i++)
   {
 
-    var coordx = Math.random() * canvas.width;
-    var coordy = Math.random() * canvas.width;
+    var coordx = Math.random() * canvas.width+55; //Lo creamos a partir de esta coordenada
+    var coordy = Math.random() * canvas.height;
     var width = Math.random() * 10 + 20;
     var height = Math.random() * 10 + 20;
 
@@ -117,6 +117,7 @@ function crearObstaculos(lienzo)
     }
 
     var ok = true;
+    //Por cada obstaculo en obstaculos comprobamos que no colisione
     obstaculos.forEach(function (item) {
         if (colision(obstaculo, item)) {
             ok = false;
@@ -125,17 +126,15 @@ function crearObstaculos(lienzo)
 
     if (ok) {
         
-        obstaculos.push(obstaculo);
+        obstaculos.push(obstaculo); //Si todo esta correcto lo metemos en el array
     }
           
   }
     obstaculosCreados=true;
-
-
 }
 
 
-
+//Comprobamos que no entren en colision ninguno
 function colision(a, b) {
     return !(
         ((a.y + a.h) < (b.y)) ||
@@ -151,10 +150,10 @@ function pintarLienzo(lienzo){
     lienzo.fillStyle='#0f0';
     lienzo.fillRect(x,y,10,10); //Dibujamos el jugador: va por posición x,y y es de 10x10  
 
+    //Para cada obstaculo dentro de obstaculos lo pintamos
     obstaculos.forEach(obstaculo => {
         lienzo.fillRect(obstaculo.x, obstaculo.y, obstaculo.w, obstaculo.h)
     });
-    //lienzo.fillRect(obstaculos[0].x, obstaculos[0].y, obstaculos[0].w, obstaculos[0].h)
     
     if(pausa==true)
     {
