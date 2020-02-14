@@ -10,11 +10,15 @@ const KEY_P= 80;
 const KEY_C= 67;
 var gameOver=false;
 var pausa=false;
+var obstaculos = [];
+var i=0;
+var obstaculosCreados=false;
 
 
 function iniciar(){
     canvas=document.getElementById('lienzo');
     lienzo=canvas.getContext('2d'); //obtenemos el contexto de dibujo
+    crearObstaculos(lienzo);
     run();
 }
 function run(){
@@ -24,7 +28,6 @@ function run(){
     {   
         requestAnimationFrame(run); //animación optimizada
         accionesJuego();
-        
         pintarLienzo(lienzo);
         pintarBordes(lienzo);
         
@@ -90,11 +93,68 @@ function accionesJuego(){
     
         
 }
+
+function crearObstaculos(lienzo)
+{
+    //  Opacidad
+    lienzo.globalAlpha = 0.7;
+    var color = "#FF0000";
+    lienzo.fillStyle = color;
+
+  for(var i=0;i<5;i++)
+  {
+
+    var coordx = Math.random() * canvas.width;
+    var coordy = Math.random() * canvas.width;
+    var width = Math.random() * 10 + 20;
+    var height = Math.random() * 10 + 20;
+
+    var obstaculo = {
+        x: coordx,
+        y: coordy,
+        w: width,
+        h: height
+    }
+
+    var ok = true;
+    obstaculos.forEach(function (item) {
+        if (colision(obstaculo, item)) {
+            ok = false;
+        }
+    })
+
+    if (ok) {
+        
+        obstaculos.push(obstaculo);
+    }
+          
+  }
+    obstaculosCreados=true;
+
+
+}
+
+
+
+function colision(a, b) {
+    return !(
+        ((a.y + a.h) < (b.y)) ||
+        (a.y > (b.y + b.h)) ||
+        ((a.x + a.w) < b.x) ||
+        (a.x > (b.x + b.w))
+    );
+}
+
 function pintarLienzo(lienzo){
     lienzo.fillStyle="#F7F9FA"; //le ponemos un color al lienzo
     lienzo.fillRect(0,0,canvas.width,canvas.height); //Dibujamos el lienzo
     lienzo.fillStyle='#0f0';
     lienzo.fillRect(x,y,10,10); //Dibujamos el jugador: va por posición x,y y es de 10x10  
+
+    obstaculos.forEach(obstaculo => {
+        lienzo.fillRect(obstaculo.x, obstaculo.y, obstaculo.w, obstaculo.h)
+    });
+    //lienzo.fillRect(obstaculos[0].x, obstaculos[0].y, obstaculos[0].w, obstaculos[0].h)
     
     if(pausa==true)
     {
