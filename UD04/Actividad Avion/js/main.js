@@ -1,20 +1,34 @@
+///////////////////////////////////////////VARIABLES//////////////////////////////
+
+//Div del texto d despegar
 var despegar = null;
 var despegarID = null;
 var despegues= null;
+
+//Disv del texto de aterrizar
+
 var aterrizajes= null;
 var aterrizar = null;
 var aterrizarID= null;
+
+//Divs de las imagenes
 var avionDespegar = null;
 var avionDespegarID= null;
 var avionAterrizar = null;
 var avionAterrizarID= null;
+
+//Div papelera
 var papelera = null;
+
+//Contadores
 var contadorDespegues=0;
 var contadorAterrizajes=0;
+
 
 window.addEventListener("load",function()
 {
   
+  //Asignacion de variables con el html ya cargado
   despegar = document.getElementById("divDespegar");
   despegarID = despegar.getAttribute("id");
   despegues= document.getElementById("numeroDespegados");
@@ -30,21 +44,22 @@ window.addEventListener("load",function()
 
 
 
+
   /////////////////////////////////////////////////PARA DESPEGUES///////////////////////////////////////////////////
 
  
-
+// Cambiamos opacidad del div establecemos event datatrasnfer
 
   avionDespegar.addEventListener("dragstart", function(event) {
     
-    // Change the opacity of the draggable element
+    
     event.target.style.opacity = "0.4";
     event.dataTransfer.setData("Text", avionDespegarID);
   });
   
 
   
-  // Output some text when finished dragging the p element and reset the opacity
+  //Ponemos la opacidad de vuelta al acabar el drag
   avionDespegar.addEventListener("dragend", function(event) {
     event.target.style.opacity = "1";
   });
@@ -55,6 +70,7 @@ window.addEventListener("load",function()
     event.preventDefault();
   });
   
+  //Comprobamos que al dropearlo, el eventdata tenga el texto deseado para que lo acepte, y si es asi, aumentamos el contador
   despegar.addEventListener("drop", function(event) {
     event.preventDefault();
     if ( event.dataTransfer.getData("Text") == "divImgDespegar" ) {
@@ -62,7 +78,11 @@ window.addEventListener("load",function()
       contadorDespegues++;
       despegues.innerHTML = contadorDespegues;
 
-    }else
+    }else if(event.dataTransfer.getData("Text") == "divDespegar")
+    {
+      //No hacemos nada si estamos soltandolo en el mismo lado
+    }
+    else
     {
       alert("Acabas de provocar un accidente aereo");
     }
@@ -70,17 +90,18 @@ window.addEventListener("load",function()
 
   /////////////////////////////////////////////////PARA ATERRIZAJES///////////////////////////////////////////////////
 
+
+  // Cambiamos opacidad del div establecemos event datatrasnfer
   
   avionAterrizar.addEventListener("dragstart", function(event) {
     
-    // Change the opacity of the draggable element
     event.target.style.opacity = "0.4";
     event.dataTransfer.setData("Text", avionAterrizarID);
   });
   
 
   
-  // Output some text when finished dragging the p element and reset the opacity
+  //Ponemos la opacidad de vuelta al acabar el drag
   avionAterrizar.addEventListener("dragend", function(event) {
     event.target.style.opacity = "1";
   });
@@ -91,12 +112,19 @@ window.addEventListener("load",function()
     event.preventDefault();
   });
   
+
+    //Comprobamos que al dropearlo, el eventdata tenga el texto deseado para que lo acepte, y si es asi, aumentamos el contador
   aterrizar.addEventListener("drop", function(event) {
     event.preventDefault();
+    //Incrementamos si el div que le arrastramos es el adecuado
     if ( event.dataTransfer.getData("Text") == "divImgAterrizar" ) {
         contadorAterrizajes++;
         aterrizajes.innerHTML =contadorAterrizajes;
-    }else
+    }else if(event.dataTransfer.getData("Text") == "divAterrizar")
+    {
+      //No hacemos nada si estamos soltandolo en el mismo lado
+    }
+    else
     {
       alert("Acabas de provocar un accidente aereo");
     }
@@ -110,18 +138,17 @@ window.addEventListener("load",function()
   /////////////////////////////////////////////////PARA QUITAR DESPEGUES O ATERRIZAJES///////////////////////////////////////////////////
 
 
-
+// Cambiamos opacidad del div establecemos event datatrasnfer
 
   despegar.addEventListener("dragstart", function(event) {
     
-    // Change the opacity of the draggable element
     event.target.style.opacity = "0.4";
     event.dataTransfer.setData("Text", despegarID);
   });
   
  
   
-  // Output some text when finished dragging the p element and reset the opacity
+  //Ponemos la opacidad de vuelta al acabar el drag
   despegar.addEventListener("dragend", function(event) {
     event.target.style.opacity = "1";
   });
@@ -144,7 +171,7 @@ window.addEventListener("load",function()
 
 
 
-  // By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element
+   //Comprobamos que al dropearlo, el eventdata tenga el texto deseado para que lo acepte, y si es asi, disminuimos el contador
   papelera.addEventListener("dragover", function(event) {
     event.preventDefault();
   });
@@ -169,9 +196,11 @@ window.addEventListener("load",function()
         contadorAterrizajes--;
         aterrizajes.innerHTML =contadorAterrizajes;
       }
+      
     }else
     {
-      alert("Acabas de provocar un accidente aereo");
+      alert(event.dataTransfer.getData("Text"))
+      alert("Acabas de provocar un accidente asereo");
     }
   });
 });
