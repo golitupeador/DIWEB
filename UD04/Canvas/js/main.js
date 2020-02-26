@@ -21,6 +21,7 @@ var nivelActual=0;
 
 
 function iniciar(){
+    
     canvas=document.getElementById('lienzo');
     lienzo=canvas.getContext('2d'); //obtenemos el contexto de dibujo
     run();
@@ -30,6 +31,7 @@ function run(){
     
     if(gameOver==false)
     {   
+        var divNivelActual= document.getElementById("nivel");
         requestAnimationFrame(run); //animación optimizada
         accionesJuego();
         pintarLienzo(lienzo);
@@ -38,6 +40,8 @@ function run(){
            nivel=nivel+1;
            nivelActual=nivelActual+1;
             crearObstaculos(lienzo, nivel);
+            divNivelActual.innerHTML="";
+            divNivelActual.append("Nivel: "+ nivelActual);
         }
         subirNivel=false;          
     }
@@ -217,21 +221,14 @@ document.addEventListener('keydown', function(evt) {
     //Creamos un manejador de evento para el teclado que se encargue de almacenar la tecla presionada. El evento que nos interesa en este caso es keydown
     lastPress=evt.keyCode;
 }, false);
-window.addEventListener("load", iniciar, false);
+//window.addEventListener("load", iniciar, false);
 
-function comprobarColisiones()
-{
-    //Veficamos si nos hemos chocado con algun elemento
-    
-    return gameOver;
-}
 
 
 window.addEventListener("load",function()
 {
-    var divNivelActual= document.getElementById("nivel");
-    divNivelActual.append("Nivel: "+ nivelActual)
     
+    iniciar();
 
 
 });
