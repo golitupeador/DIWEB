@@ -1,0 +1,26 @@
+#lienzo {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    opacity: 1;
+}
+
+body
+{
+    background-image: url(../imagenes/sonic.jpg);  
+}
+
+#informacion
+{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    opacity: 0.8;
+}

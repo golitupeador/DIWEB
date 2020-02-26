@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
     <script src="js/main.js"></script>
+    <audio  loop>
+        <source src="musica/sonic.ogg" type="audio/ogg">
+        <source src="musica/sonic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
 </head>
 <body>
-    <canvas id="lienzo" width="600" height="400"> 
-        Su navegador no soporta el elemento canvas
-      </canvas>
+    <div id="principal">
+        <canvas id="lienzo" width="600" height="400"> 
+            Su navegador no soporta el elemento canvas
+        </canvas>
+
+    </div>
+    <div id="informacion">
+        <div ><p id="nivel"></p></div>
+    </div>
 </body>
 </html>
