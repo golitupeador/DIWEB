@@ -18,12 +18,14 @@ var subirNivel=false;
 var player=[];
 var reiniciar=false;
 var nivelActual=0;
+var flechaPintada=false;
 
 
 function iniciar(){
     
     canvas=document.getElementById('lienzo');
     lienzo=canvas.getContext('2d'); //obtenemos el contexto de dibujo
+    
     run();
 }
 function run(){
@@ -33,6 +35,19 @@ function run(){
     {   
         var divNivelActual= document.getElementById("nivel");
         requestAnimationFrame(run); //animación optimizada
+        if(flechaPintada==false)
+        {
+            lienzo.beginPath();
+            lienzo.fillStyle="#000000";
+            lienzo.moveTo(150,400);
+            lienzo.lineTo(400,400);
+            lienzo.lineTo(375,375);
+            lienzo.arcTo(400,400,375,425,35);
+            lienzo.lineTo(400,400);
+            lienzo.stroke();
+            lienzo.fill();
+            flechaPintada=true;
+        }
         accionesJuego();
         pintarLienzo(lienzo);
         if(subirNivel==true)
@@ -45,6 +60,11 @@ function run(){
         }
         subirNivel=false;          
     }
+    if(reiniciar==true)
+    {
+        lienzo.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    reiniciar=false;
 }
 function accionesJuego(){
     //Modificamos la dirección que tendrá nuestro player en función de la tecla presionada  
@@ -62,7 +82,7 @@ function accionesJuego(){
 
     if(lastPress==KEY_C)
     {
-        //TODO
+        reiniciar=true;
     }
 
     if(pausa==false)
@@ -133,8 +153,9 @@ function crearObstaculos(lienzo, nivel)
     obstaculos=[];
     //  Opacidad
     lienzo.globalAlpha = 0.7;
-    var color = "#FF0000";
-    lienzo.fillStyle = color;
+
+
+
 
   for(var i=0;i<nivel;i++)
   {
@@ -182,25 +203,27 @@ function colision(a, b) {
 function pintarLienzo(lienzo){
     lienzo.fillStyle="#F7F9FA"; //le ponemos un color al lienzo
     lienzo.fillRect(0,0,canvas.width,canvas.height); //Dibujamos el lienzo
-    lienzo.fillStyle='#0f0';
+    lienzo.fillStyle='#34c0eb';
     lienzo.fillRect(x,y,10,10); //Dibujamos el jugador: va por posición x,y y es de 10x10  
 
     //Para cada obstaculo dentro de obstaculos lo pintamos
     obstaculos.forEach(obstaculo => {
+        lienzo.fillStyle ="#FF0000";
         lienzo.fillRect(obstaculo.x, obstaculo.y, obstaculo.w, obstaculo.h)
     });
     pintarBordes(lienzo);
     if(pausa==true)
     {
-        lienzo.font = "40px Georgia";
-        lienzo.fillText("Pause!", canvas.width/2-40, canvas.height/2); 
+        lienzo.fillStyle = "#000000"
+        lienzo.font = "bold 40px Georgia";
+        lienzo.fillText("Pause!", canvas.width/2-20, canvas.height/2); 
 
-        
     }
     if(gameOver==true)
     {
-        lienzo.font = "40px Georgia";
-        lienzo.fillText("Has perdido", canvas.width/2-50, canvas.height/2);
+        lienzo.fillStyle = "#000000"
+        lienzo.font = "bold 40px Georgia";
+        lienzo.fillText("Has perdido", canvas.width/2-180, canvas.height/2);
     }
     if(subirNivel==true)
     {
@@ -223,13 +246,44 @@ document.addEventListener('keydown', function(evt) {
 }, false);
 //window.addEventListener("load", iniciar, false);
 
+function drawArrowhead(context, from, to, radius) {
+	var x_center = to.x;
+	var y_center = to.y;
+
+	var angle;
+	var x;
+	var y;
+
+	context.beginPath();
+
+	angle = Math.atan2(to.y - from.y, to.x - from.x)
+	x = radius * Math.cos(angle) + x_center;
+	y = radius * Math.sin(angle) + y_center;
+
+	context.moveTo(x, y);
+
+	angle += (1.0/3.0) * (2 * Math.PI)
+	x = radius * Math.cos(angle) + x_center;
+	y = radius * Math.sin(angle) + y_center;
+
+	context.lineTo(x, y);
+
+	angle += (1.0/3.0) * (2 * Math.PI)
+	x = radius *Math.cos(angle) + x_center;
+	y = radius *Math.sin(angle) + y_center;
+
+	context.lineTo(x, y);
+
+	context.closePath();
+
+	context.fill();
+}
 
 
 window.addEventListener("load",function()
 {
     
     iniciar();
-
 
 });
 
