@@ -1,3 +1,9 @@
+/*
+    No he conseguido hacer el boton de reiniciar en condiciones debido a mi codigo espagetti desordenado
+
+*/
+
+
 var lienzo=null, canvas=null;
 var x=50,y=50;
 var lastPress=null; //Variable para guardar la tecla presionada
@@ -18,7 +24,7 @@ var subirNivel=false;
 var player=[];
 var reiniciar=false;
 var nivelActual=0;
-var flechaPintada=false;
+
 
 
 function iniciar(){
@@ -30,24 +36,27 @@ function iniciar(){
 }
 function run(){
     //requestAnimationFrame(): informa al navegador de que quieres realizar una animación y solicita que el navegador programe el repintado de la ventana para el próximo ciclo de animación.
-    
+    var divNivelActual= document.getElementById("nivel");
+
+    if(reiniciar==true)
+    {
+        nivel=0;
+        nivelActual=0;
+        crearObstaculos(lienzo, nivel);
+        nivel=4;
+        divNivelActual.innerHTML="";
+        divNivelActual.append("Nivel: "+ nivelActual);
+        gameOver=false;
+        x=50;
+        y=50;
+    }
+    reiniciar=false;
+
+
     if(gameOver==false)
-    {   
-        var divNivelActual= document.getElementById("nivel");
+    {    
         requestAnimationFrame(run); //animación optimizada
-        if(flechaPintada==false)
-        {
-            lienzo.beginPath();
-            lienzo.fillStyle="#000000";
-            lienzo.moveTo(150,400);
-            lienzo.lineTo(400,400);
-            lienzo.lineTo(375,375);
-            lienzo.arcTo(400,400,375,425,35);
-            lienzo.lineTo(400,400);
-            lienzo.stroke();
-            lienzo.fill();
-            flechaPintada=true;
-        }
+        
         accionesJuego();
         pintarLienzo(lienzo);
         if(subirNivel==true)
@@ -60,11 +69,10 @@ function run(){
         }
         subirNivel=false;          
     }
-    if(reiniciar==true)
-    {
-        lienzo.clearRect(0, 0, canvas.width, canvas.height);
-    }
-    reiniciar=false;
+    
+    
+    
+    
 }
 function accionesJuego(){
     //Modificamos la dirección que tendrá nuestro player en función de la tecla presionada  
@@ -83,6 +91,7 @@ function accionesJuego(){
     if(lastPress==KEY_C)
     {
         reiniciar=true;
+        
     }
 
     if(pausa==false)
@@ -137,8 +146,9 @@ function accionesJuego(){
     }
     obstaculos.forEach(function (obstaculo) {
         if (colision(obstaculo, player)) {
-            lienzo.font = "40px Georgia";
-            lienzo.fillText("Has perdido", canvas.width/2-50, canvas.height/2);
+            lienzo.fillStyle = "#000000"
+        lienzo.font = "bold 40px Georgia";
+        lienzo.fillText("Has perdido", canvas.width/2-180, canvas.height/2);
             gameOver=true;
         }
     })
@@ -147,15 +157,13 @@ function accionesJuego(){
         
 }
 
+//Funcion que crea un array de obstaculos y evita que se superpongan
 function crearObstaculos(lienzo, nivel)
 {
     
     obstaculos=[];
     //  Opacidad
     lienzo.globalAlpha = 0.7;
-
-
-
 
   for(var i=0;i<nivel;i++)
   {
@@ -225,6 +233,7 @@ function pintarLienzo(lienzo){
         lienzo.font = "bold 40px Georgia";
         lienzo.fillText("Has perdido", canvas.width/2-180, canvas.height/2);
     }
+    //Creamos los obstaculos si subimos de nivel
     if(subirNivel==true)
     {
         crearObstaculos(lienzo, nivel)
@@ -246,44 +255,13 @@ document.addEventListener('keydown', function(evt) {
 }, false);
 //window.addEventListener("load", iniciar, false);
 
-function drawArrowhead(context, from, to, radius) {
-	var x_center = to.x;
-	var y_center = to.y;
-
-	var angle;
-	var x;
-	var y;
-
-	context.beginPath();
-
-	angle = Math.atan2(to.y - from.y, to.x - from.x)
-	x = radius * Math.cos(angle) + x_center;
-	y = radius * Math.sin(angle) + y_center;
-
-	context.moveTo(x, y);
-
-	angle += (1.0/3.0) * (2 * Math.PI)
-	x = radius * Math.cos(angle) + x_center;
-	y = radius * Math.sin(angle) + y_center;
-
-	context.lineTo(x, y);
-
-	angle += (1.0/3.0) * (2 * Math.PI)
-	x = radius *Math.cos(angle) + x_center;
-	y = radius *Math.sin(angle) + y_center;
-
-	context.lineTo(x, y);
-
-	context.closePath();
-
-	context.fill();
-}
 
 
 window.addEventListener("load",function()
 {
     
     iniciar();
+    
 
 });
 

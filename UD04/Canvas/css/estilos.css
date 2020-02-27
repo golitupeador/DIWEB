@@ -24,4 +24,8 @@ body
     width: 400px;
     height: 300px;
     opacity: 0.8;
+    
+}
+p{
+    color: rgb(40, 31, 168);
 }
